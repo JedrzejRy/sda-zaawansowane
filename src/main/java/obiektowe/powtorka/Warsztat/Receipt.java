@@ -1,15 +1,15 @@
 package obiektowe.powtorka.Warsztat;
 
-public class Recipt {
+public class Receipt {
     private String title = "Tire repair";
-    private int ammount = 1;
-    private String price = ammount + "x100 zl";
+    private int amount = 1;
+    private String price = amount + "x100 zl";
 
     @Override
     public String toString() {
-        return "Recipt{" +
+        return "Recipe{" +
                 "title='" + title + '\'' +
-                ", ammount=" + ammount +
+                ", amount=" + amount +
                 ", price='" + price + '\'' +
                 '}';
     }

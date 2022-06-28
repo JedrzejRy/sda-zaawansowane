@@ -1,10 +1,8 @@
 package obiektowe.powtorka.Warsztat;
 
-import java.util.Arrays;
-
 public class Workshop {
     private Car car;
-    private Recipt recipt = new Recipt();
+    private Receipt receipt = new Receipt();
 
     public Workshop(Car car) {
         this.car = car;
@@ -16,6 +14,6 @@ public class Workshop {
                 tire.repairTire();
             }
         }
-        System.out.println(recipt);
+        System.out.println(receipt);
     }
 }
