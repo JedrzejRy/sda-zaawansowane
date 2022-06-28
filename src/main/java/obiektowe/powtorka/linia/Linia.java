@@ -17,6 +17,14 @@ public class Linia {
         this.wypelnienie = "#";
     }
 
+    public int getDlugosc() {
+        return dlugosc;
+    }
+
+    public void setDlugosc(int dlugosc) {
+        this.dlugosc = dlugosc;
+    }
+
     void drukujLinie(){
         for (int i = 0 ; i<=dlugosc; i++) {
             System.out.print(wypelnienie);

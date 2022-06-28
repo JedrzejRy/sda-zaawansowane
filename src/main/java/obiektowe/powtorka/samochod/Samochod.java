@@ -18,6 +18,15 @@ public class Samochod {
         this.przebieg = random.nextInt(20000)+1;
     }
 
+
+    public int getPrzebieg() {
+        return przebieg;
+    }
+
+    public void setPrzebieg(int przebieg) {
+        this.przebieg = przebieg;
+    }
+
     void przebiegIMarka(){
         System.out.println(przebieg+"km");
         System.out.println(marka);
