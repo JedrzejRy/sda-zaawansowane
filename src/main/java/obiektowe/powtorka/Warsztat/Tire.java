@@ -15,10 +15,12 @@ public class Tire {
 
     public void setFlatTire(){
         flat = true;
+        this.pressure = 0.5;
     }
 
     public void repairTire(){
         this.flat = false;
+        this.pressure = 2.2;
     }
 
     public boolean isFlat() {
