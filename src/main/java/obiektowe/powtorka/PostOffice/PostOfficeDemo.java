@@ -27,5 +27,16 @@ public class PostOfficeDemo {
             price += c.priceTag(c.getWeight(), c.isPriority());
         }
         System.out.println(price);
+        System.out.println();
+
+        Post post = new Post();
+        Package gift = post.createAPackage();
+        System.out.println(gift.priceTag(gift.getWeight(), gift.isPriority()));
+        post.sendAPackage(gift,20);
+        System.out.println(gift.toString());
+
+
+
+
     }
 }

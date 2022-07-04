@@ -68,6 +68,7 @@ public class Package {
                 ", receiver='" + receiver + '\'' +
                 ", weight=" + weight +
                 ", priority=" + priority +
+                ", status='" + status + '\'' +
                 '}';
     }
 }
