@@ -24,7 +24,7 @@ public class Town {
     public void whoCanVote(){
         for (Citizen c: listOfCitizens){
             if (c.canVote(c)){
-                System.out.println(c.toString());
+                System.out.println(c);
             }
         }
     }
