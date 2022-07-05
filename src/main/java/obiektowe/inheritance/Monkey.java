@@ -1,0 +1,35 @@
+package obiektowe.inheritance;
+
+public class Monkey extends Animal {
+    private String name;
+    private int age;
+    private int tailLength;
+
+
+    public Monkey(String name, int age, int tailLength) {
+        this.name = name;
+        this.age = age;
+        this.tailLength = tailLength;
+    }
+
+    public Monkey() {
+        name = "Jacek";
+        age = 8;
+        tailLength = 20;
+    }
+
+    public void uhaha(){
+        System.out.println("Uhahaha!!!");
+    }
+
+    public void  jump(){
+        System.out.println(name + " skacze w poszukiwaniu banana!");
+    }
+
+@Override
+    public void eat(){
+        System.out.println("Malpa je banana");
+    }
+
+
+}
