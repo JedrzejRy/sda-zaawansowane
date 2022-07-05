@@ -14,7 +14,7 @@ public class Jaguar extends Animal {
     }
 
     public void climb(){
-        System.out.println(name + " is climbing the three!");
+        System.out.println(name + " is climbing the tree!");
     }
 
     @Override
