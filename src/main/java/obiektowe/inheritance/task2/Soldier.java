@@ -6,4 +6,9 @@ public class Soldier extends Citizen{
         super(name);
     }
 
+    @Override
+    public boolean canVote() {
+        return true;
+    }
+
 }

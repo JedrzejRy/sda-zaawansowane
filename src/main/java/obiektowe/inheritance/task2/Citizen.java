@@ -12,7 +12,5 @@ public abstract class Citizen {
         return name;
     }
 
-    public boolean canVote(Citizen citizen){
-        return citizen instanceof Townsman || citizen instanceof Soldier;
-    }
+    public abstract boolean canVote();
 }

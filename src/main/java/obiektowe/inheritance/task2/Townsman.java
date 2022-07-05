@@ -6,4 +6,9 @@ public class Townsman extends Citizen{
         super(name);
     }
 
+    @Override
+    public boolean canVote() {
+        return true;
+    }
+
 }
