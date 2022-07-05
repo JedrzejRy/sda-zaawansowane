@@ -1,4 +1,4 @@
-package obiektowe.inheritance;
+package obiektowe.inheritance.zajecia;
 
 public class AnimalsDemo {
     public static void main(String[] args) {
