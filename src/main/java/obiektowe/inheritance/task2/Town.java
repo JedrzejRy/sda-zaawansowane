@@ -14,7 +14,7 @@ public class Town {
     public int howManyCanVote(){
         int count = 0;
         for (Citizen c: listOfCitizens){
-            if (c instanceof Townsman || c instanceof Soldier){
+            if (c.canVote(c)){
                 count++;
             }
         }
@@ -23,7 +23,7 @@ public class Town {
 
     public void whoCanVote(){
         for (Citizen c: listOfCitizens){
-            if (c instanceof Townsman || c instanceof Soldier){
+            if (c.canVote(c)){
                 System.out.println(c.toString());
             }
         }
