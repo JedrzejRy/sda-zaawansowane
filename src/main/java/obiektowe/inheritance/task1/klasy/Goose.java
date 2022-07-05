@@ -1,12 +1,10 @@
-package obiektowe.inheritance.zadanie;
+package obiektowe.inheritance.task1.klasy;
 
 public class Goose extends Animal {
-    private String name;
-    private int age;
+
 
     public Goose(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     public void honk(){

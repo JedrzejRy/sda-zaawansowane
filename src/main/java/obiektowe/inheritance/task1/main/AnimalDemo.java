@@ -1,4 +1,8 @@
-package obiektowe.inheritance.zadanie;
+package obiektowe.inheritance.task1.main;
+
+import obiektowe.inheritance.task1.klasy.Animal;
+import obiektowe.inheritance.task1.klasy.Goose;
+import obiektowe.inheritance.task1.klasy.Jaguar;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,10 @@
-package obiektowe.inheritance.zadanie;
+package obiektowe.inheritance.task1.klasy;
 
 public class Jaguar extends Animal {
-    private String name;
-    private int age;
+
 
     public Jaguar(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     public void roar(){
