@@ -1,4 +1,4 @@
-package obiektowe.powtorka.Warsztat;
+package obiektowe.powtorka.warsztat;
 
 import java.util.Random;
 

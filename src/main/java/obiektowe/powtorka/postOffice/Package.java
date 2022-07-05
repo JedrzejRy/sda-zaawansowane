@@ -1,4 +1,4 @@
-package obiektowe.powtorka.PostOffice;
+package obiektowe.powtorka.postOffice;
 
 public class Package {
     private String sender;
@@ -22,10 +22,11 @@ public class Package {
     }
 
     public Package() {
-        this.sender = Randomizer.randomSender();
-        this.receiver = Randomizer.randomReceiver();
-        this.weight = Randomizer.randomWeight();
-        this.priority = Randomizer.randomPriority();
+        Randomizer randomizer = new Randomizer();
+        this.sender = randomizer.randomSender();
+        this.receiver = randomizer.randomReceiver();
+        this.weight = randomizer.randomWeight();
+        this.priority = randomizer.randomPriority();
     }
 
 

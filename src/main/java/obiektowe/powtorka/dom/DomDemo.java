@@ -1,6 +1,4 @@
-package obiektowe.powtorka.Dom;
-
-import java.util.Arrays;
+package obiektowe.powtorka.dom;
 
 public class DomDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package obiektowe.powtorka.Dom;
+package obiektowe.powtorka.dom;
 
 public class Pokoj {
     private Okno[] okna;

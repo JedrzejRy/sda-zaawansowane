@@ -1,4 +1,4 @@
-package obiektowe.powtorka.Warsztat;
+package obiektowe.powtorka.warsztat;
 
 public class Receipt {
     private String title = "Tire repair";

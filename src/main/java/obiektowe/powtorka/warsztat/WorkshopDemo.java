@@ -1,7 +1,6 @@
-package obiektowe.powtorka.Warsztat;
+package obiektowe.powtorka.warsztat;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class WorkshopDemo {
     public static void main(String[] args) {

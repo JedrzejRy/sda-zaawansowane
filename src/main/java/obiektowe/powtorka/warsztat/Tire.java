@@ -1,4 +1,4 @@
-package obiektowe.powtorka.Warsztat;
+package obiektowe.powtorka.warsztat;
 
 public class Tire {
     private double pressure = 2.2;

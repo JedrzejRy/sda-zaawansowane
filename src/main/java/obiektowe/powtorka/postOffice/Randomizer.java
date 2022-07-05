@@ -1,4 +1,4 @@
-package obiektowe.powtorka.PostOffice;
+package obiektowe.powtorka.postOffice;
 
 import java.util.Random;
 
@@ -8,20 +8,20 @@ public class Randomizer {
     private static final String[] receivers = new String[]{"Echo Hammond","Matilda Dittman","Christine Foster","Ollie Stanley","Ainsley Harvey", "Bond Gardner","Phoebe Cantrell"};
     private static final Random random = new Random();
 
-    public static String randomSender(){
+    public  String randomSender(){
         int number = random.nextInt(7);
         return senders[number];
     }
-    public static String randomReceiver(){
+    public  String randomReceiver(){
         int number = random.nextInt(7);
         return receivers[number];
     }
 
-    public static double randomWeight(){
+    public  double randomWeight(){
         return random.nextInt(100);
     }
 
-    public static boolean randomPriority(){
+    public  boolean randomPriority(){
         int number = random.nextInt(2);
         return number == 1;
     }

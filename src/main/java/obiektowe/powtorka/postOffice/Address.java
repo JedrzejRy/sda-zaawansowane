@@ -1,4 +1,4 @@
-package obiektowe.powtorka.PostOffice;
+package obiektowe.powtorka.postOffice;
 
 public class Address {
     private String street;
@@ -9,5 +9,15 @@ public class Address {
         this.street = street;
         this.houseNumber = houseNumber;
         this.postCode = postCode;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", houseNumber=" + houseNumber +
+                ", postCode='" + postCode + '\'' +
+                '}';
     }
 }

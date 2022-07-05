@@ -1,4 +1,6 @@
-package obiektowe.powtorka.PostOffice;
+package obiektowe.powtorka.postOffice;
+
+import java.util.Arrays;
 
 public class PostOfficeDemo {
     public static void main(String[] args) {
@@ -34,6 +36,18 @@ public class PostOfficeDemo {
         System.out.println(gift.priceTag(gift.getWeight(), gift.isPriority()));
         post.sendAPackage(gift,20);
         System.out.println(gift.toString());
+
+
+        Address address = new Address("Dobra",15,"05-125");
+        Address address2 = new Address("Mila",7,"05-125");
+        System.out.println(address);
+
+        Letter letter = new Letter(address,address2);
+        post.sendALetter(letter,6);
+        Letter letter2 = new Letter(address2,address);
+        post.sendALetter(letter,6);
+
+        post.sendAllLetters();
 
 
 

@@ -1,4 +1,4 @@
-package obiektowe.powtorka.Dom;
+package obiektowe.powtorka.dom;
 
 public class Lozko {
     private int dniOdPrzebraniaPoscieli;

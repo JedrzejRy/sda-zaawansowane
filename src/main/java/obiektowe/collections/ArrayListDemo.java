@@ -1,6 +1,7 @@
 package obiektowe.collections;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class ArrayListDemo {
         names[2] = "Adam";
 
 
-        ArrayList<String> nameList = new ArrayList<>();
+        List<String> nameList = new ArrayList<>();
         System.out.println(nameList);
         System.out.println(nameList.size());
         nameList.add("Marcin");
@@ -26,11 +27,18 @@ public class ArrayListDemo {
         String element = nameList.get(0);
         System.out.println(element);
 
-        nameList.set(1,"Zofia");
+        nameList.set(1, "Zofia");
         System.out.println(nameList);
 
         nameList.remove(0);
         System.out.println(nameList);
+
+
+        List<String> names2 = new ArrayList<>(List.of("Ada", "Ania", "Marek", "Marta"));
+        names2.add("Daniel");
+        System.out.println(names2);
+
+
 
     }
 }
