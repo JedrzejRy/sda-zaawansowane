@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Town {
-    private static List<Citizen> listOfCitizens = new ArrayList<>();
+    private  List<Citizen> listOfCitizens = new ArrayList<>();
 
     public Town(Citizen... citizens) {
         listOfCitizens = Arrays.stream(citizens).toList();
