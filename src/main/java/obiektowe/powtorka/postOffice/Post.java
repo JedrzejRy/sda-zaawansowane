@@ -9,7 +9,7 @@ public class Post {
     public double sendAPackage(Package package1, double money) {
         if (money >= package1.priceTag(package1.getWeight(), package1.isPriority())) {
             package1.setStatus("Send");
-            earnings += money - package1.priceTag(package1.getWeight(), package1.isPriority());
+            earnings += package1.priceTag(package1.getWeight(), package1.isPriority());
             return money - package1.priceTag(package1.getWeight(), package1.isPriority());
         } else {
             System.out.println("Insufficient Funds");
