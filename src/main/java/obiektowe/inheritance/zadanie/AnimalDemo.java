@@ -16,6 +16,7 @@ public class AnimalDemo {
         animalList.add(jaguar);
 
         for (Animal animal : animalList){
+            animal.makeASound();
             animal.goToSleep();
         }
 

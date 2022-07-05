@@ -22,4 +22,9 @@ public class Goose extends Animal {
         System.out.print(name);
         super.goToSleep();
     }
+
+    @Override
+    public void makeASound() {
+        honk();
+    }
 }

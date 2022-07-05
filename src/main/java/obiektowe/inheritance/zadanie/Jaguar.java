@@ -22,4 +22,9 @@ public class Jaguar extends Animal {
         System.out.print(name);
         super.goToSleep();
     }
+
+    @Override
+    public void makeASound() {
+        roar();
+    }
 }
