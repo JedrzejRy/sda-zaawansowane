@@ -32,7 +32,7 @@ public class Package {
 
     double priceTag(double weight, boolean priority) {
         double price = 0;
-        if (weight < 0.5) {
+        if (weight <= 0.5) {
             price = 5;
         } else if (weight > 0.5 && weight <= 1) {
             price = 8;
