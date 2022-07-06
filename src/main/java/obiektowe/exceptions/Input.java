@@ -20,7 +20,7 @@ public class Input {
                 test = false;
                 int number = input.readNumber();
             } catch (InputMismatchException e) {
-                System.out.println("Zla zmienna!\n Podaj Numer:");
+                System.out.println("Zla zmienna!");
                 test = true;
             }
 
