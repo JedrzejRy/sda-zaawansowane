@@ -1,4 +1,4 @@
-package obiektowe.exceptions;
+package obiektowe.exceptions.classes;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -23,7 +23,6 @@ public class Input {
                 System.out.println("Zla zmienna!");
                 test = true;
             }
-
         }
     }
 
