@@ -4,19 +4,20 @@ import java.util.*;
 
 public class MyArrayList<E> implements List<E> {
 
+    private int actualSize;
     private E[] elements = (E[]) new Object[10];
 
 
     @Override
     public int size() {
-        return elements.length;
+        return actualSize;
     }
 
     @Override
     public boolean isEmpty() {
         int count = 0;
-        for (E e :elements){
-            if (e ==null){
+        for (E e : elements) {
+            if (e == null) {
                 count++;
             }
         }
@@ -25,8 +26,8 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(Object o) {
-        for (E e:elements){
-            if (e==o){
+        for (E e : elements) {
+            if (e == o) {
                 return true;
             }
         }
@@ -50,6 +51,30 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean add(E e) {
+        if (e == null) {
+            return false;
+        }
+        elements[actualSize++] = e;
+        if (actualSize == elements.length) {
+            grow();
+        }
+        return true;
+    }
+
+    private void grow() {  //dodaj 2xtyle miejsca
+       /* E[] newArray = (E[]) new Object[elements.length*2];
+        for (int i = 0; i< elements.length; i++){
+            newArray[i] = elements[i];
+        }
+        elements = newArray; */
+        elements = Arrays.copyOf(elements, elements.length * 2);
+    }
+
+
+   /* public boolean add(E e) {
+        if (e==null){
+            return false;
+        }
         int count = 0;
         boolean check = true;
         while (check) {
@@ -61,10 +86,16 @@ public class MyArrayList<E> implements List<E> {
             }
         }
         return true;
-    }
+    }*/
 
     @Override
     public boolean remove(Object o) {
+        for (E e : elements) {
+            if (e == o) {
+                e = null;
+                return true;
+            }
+        }
         return false;
     }
 
@@ -111,12 +142,18 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public void add(int index, E element) {
-
+        elements[index] = element;
     }
 
     @Override
     public E remove(int index) {
-        elements[index] = null;
+        for (int i = 0; i< elements.length; i++){
+            elements[index]= elements[index+1];
+            index++;
+            if (index == elements.length-1){
+                break;
+            }
+        }
         return null;
     }
 

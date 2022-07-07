@@ -14,8 +14,9 @@ public class Main {
         myList.add(text2);
         System.out.println(myList);
 
-        myList.set(5,text3);
+        myList.set(2,text3);
         System.out.println(myList);
+        System.out.println();
 
         myList.remove(0);
         System.out.println(myList);
