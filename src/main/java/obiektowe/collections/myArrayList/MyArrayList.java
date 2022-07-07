@@ -90,12 +90,6 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
-        for (E e : elements) {
-            if (e == o) {
-                e = null;
-                return true;
-            }
-        }
         return false;
     }
 
