@@ -19,6 +19,9 @@ public class Main {
         System.out.println(myList);
         System.out.println();
 
+        myList.add(1,text);
+        System.out.println(myList);
+
         myList.remove(1);
         System.out.println(myList);
 

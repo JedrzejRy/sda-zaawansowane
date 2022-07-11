@@ -147,10 +147,14 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public void add(int index, E element) {
-        if (elements[index] == null) {
-            throw new IndexOutOfBoundsException();
+        for (int i = actualSize-1; i >= index; i--) {
+            elements[i + 1] = elements[i];
         }
         elements[index] = element;
+        actualSize++;
+        if (actualSize == elements.length) { //jeśli koniec miejsca - powiesz zbior
+            grow();
+        }
     }
 
     @Override
