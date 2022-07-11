@@ -90,6 +90,7 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
+
         return false;
     }
 
@@ -130,22 +131,35 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public E set(int index, E element) {
+        actualSize++;
+        if (actualSize == elements.length) {
+            grow();
+        }
+        if (element == null) {
+            return null;
+        }
+        for (int i = 8; i >= index; i--) {
+            elements[i + 1] = elements[i];
+        }
         elements[index] = element;
         return null;
     }
 
     @Override
     public void add(int index, E element) {
+        if (elements[index] == null) {
+            throw new IndexOutOfBoundsException();
+        }
         elements[index] = element;
     }
 
     @Override
     public E remove(int index) {
-        for (int i = 0; i< elements.length; i++){
-            elements[index]= elements[index+1];
+        for (int i = 0; i < elements.length; i++) {
+            elements[index] = elements[index + 1];
             index++;
-            if (index == elements.length-1){
-                break;
+            if (index == elements.length - 1) {
+                return null;
             }
         }
         return null;

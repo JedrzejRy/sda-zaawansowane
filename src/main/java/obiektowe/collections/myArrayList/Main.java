@@ -1,5 +1,6 @@
 package obiektowe.collections.myArrayList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -14,11 +15,11 @@ public class Main {
         myList.add(text2);
         System.out.println(myList);
 
-        myList.set(2,text3);
+        myList.set(1,text3);
         System.out.println(myList);
         System.out.println();
 
-        myList.remove(0);
+        myList.remove(1);
         System.out.println(myList);
 
         System.out.println(myList.get(1));
@@ -34,5 +35,7 @@ public class Main {
 
         System.out.println(myList.contains(text2));
 
+        List<String> lista = new ArrayList<>();
+        System.out.println(lista);
     }
 }
