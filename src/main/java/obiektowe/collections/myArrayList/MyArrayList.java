@@ -159,6 +159,7 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public E remove(int index) {
+        actualSize--;
         for (int i = 0; i < elements.length; i++) {
             elements[index] = elements[index + 1];
             index++;
