@@ -71,7 +71,7 @@ public class MyStreamService implements StreamService {
     @Override
     public Person findRichestPerson(List<Person> people) {
         return people.stream()
-                .sorted((person, person2) -> (int) (person.getCash() - person2.getCash()))
+                .sorted((person, person2) -> (int) (person2.getCash() - person.getCash()))
                 .findFirst()
                 .get();
 

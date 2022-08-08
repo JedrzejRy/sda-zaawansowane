@@ -32,6 +32,7 @@ public class PersonDemo {
         System.out.println(streamService.findPeopleOfIdGreaterThan(people, 2));
         System.out.println(streamService.hasSenior(people));
         System.out.println(streamService.sumTotalCash(people));
+        System.out.println(streamService.findRichestPerson(people));
         System.out.println(streamService.computeAverageAge(people));
 
         //List<Person> people = streamService.buildPeopleWithNames(names);
