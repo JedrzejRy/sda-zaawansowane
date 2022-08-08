@@ -36,7 +36,7 @@ public class MyStreamService implements StreamService {
 
     @Override
     public List<Integer> computeNamesLength(List<String> names) {
-       return names.stream()
+        return names.stream()
                 .map(name -> name.length())
                 .toList();
     }
@@ -50,26 +50,38 @@ public class MyStreamService implements StreamService {
 
     @Override
     public List<Person> findPeopleOfIdGreaterThan(List<Person> people, int id) {
-        return null;
+        return people.stream()
+                .filter(person -> person.getId() > id)
+                .toList();
     }
 
     @Override
     public boolean hasSenior(List<Person> people) {
-        return false;
+        return people.stream()
+                .anyMatch(person -> person.getAge() > 60);
     }
 
     @Override
     public double sumTotalCash(List<Person> people) {
-        return 0;
+        return people.stream()
+                .mapToInt(person -> (int) person.getCash())
+                .sum();
     }
 
     @Override
     public Person findRichestPerson(List<Person> people) {
-        return null;
+        return people.stream()
+                .sorted((person, person2) -> (int) (person.getCash() - person2.getCash()))
+                .findFirst()
+                .get();
+
     }
 
     @Override
     public double computeAverageAge(List<Person> people) {
-        return 0;
+        return people.stream()
+                .mapToInt(person -> (int) person.getCash())
+                .average()
+                .getAsDouble();
     }
 }

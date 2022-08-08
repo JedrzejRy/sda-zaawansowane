@@ -17,7 +17,7 @@ public class MyPerson extends Person{
 
     @Override
     public LocalDate getRandomBirthDate() {
-        long minDay = LocalDate.of(1970, 1, 1).toEpochDay();
+        long minDay = LocalDate.of(1950, 1, 1).toEpochDay();
         long maxDay = LocalDate.of(2015, 12, 31).toEpochDay();
         long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
         return LocalDate.ofEpochDay(randomDay);
@@ -25,6 +25,6 @@ public class MyPerson extends Person{
 
     @Override
     public int getAge() {
-        return LocalDate.now().getYear() - super.getBirthDate().getYear();
+        return LocalDate.now().getYear() - getBirthDate().getYear();
     }
 }
