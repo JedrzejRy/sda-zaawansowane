@@ -10,13 +10,13 @@ public class Main {
         System.out.println(scream.print("Koza i kaczka"));
 
         Printer firstLetters = text -> {
-            String result = "";
+            StringBuilder result = new StringBuilder();
             List<String> list = new ArrayList<>(List.of(text.split(" ")));
             for (String letter : list) {
                 char charAt = letter.charAt(0);
-                result += charAt;
+                result.append(charAt);
             }
-            return result;
+            return result.toString();
 
         };
 

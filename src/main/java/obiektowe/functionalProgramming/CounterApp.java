@@ -20,20 +20,23 @@ public class CounterApp {
         JTextField numberField = new JTextField("0",10);
 
         panel.add(numberField);
-        frame.pack();
 
-        ActionListener action = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Click!!");
-                int number = Integer.parseInt(numberField.getText());
-                number++;
-                numberField.setText(number+"");
+        ActionListener action = e -> {
+            System.out.println("Click!!");
+            int number = Integer.parseInt(numberField.getText());
+            number++;
+            numberField.setText(number+"");
 
-            }
         };
         button.addActionListener(action);
 
 
+        JButton lambdaButton = new JButton("Lambda przycisk");
+        panel.add(lambdaButton);
+
+        frame.pack();
+
+
+        lambdaButton.addActionListener(e -> System.out.println("Hello!"));
     }
 }
