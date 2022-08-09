@@ -65,7 +65,7 @@ public class MyStreamService implements StreamService {
     @Override
     public double sumTotalCash(List<Person> people) {
         return people.stream()
-                .mapToInt(person -> (int) person.getCash())
+                .mapToDouble(person -> person.getCash())
                 .sum();
     }
 
@@ -81,7 +81,7 @@ public class MyStreamService implements StreamService {
     @Override
     public double computeAverageAge(List<Person> people) {
         return people.stream()
-                .mapToInt(person -> (int) person.getCash())
+                .mapToDouble(person -> person.getCash())
                 .average()
                 .getAsDouble();
     }
