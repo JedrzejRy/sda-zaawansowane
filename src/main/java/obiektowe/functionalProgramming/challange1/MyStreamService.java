@@ -3,6 +3,7 @@ package obiektowe.functionalProgramming.challange1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MyStreamService implements StreamService {
     @Override
@@ -43,9 +44,9 @@ public class MyStreamService implements StreamService {
 
     @Override
     public List<Person> buildPeopleWithNames(List<String> names) {
-        List<Person> people = new ArrayList<>();
-        names.forEach(name -> people.add(new MyPerson(name)));
-        return people;
+      return   names.stream()
+                .map(name -> new MyPerson(name))
+                .collect(Collectors.toList());
     }
 
     @Override
