@@ -15,7 +15,6 @@ public class ProductFileRepository {
             oos.flush();
             oos.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Brak pliku");
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -23,7 +22,6 @@ public class ProductFileRepository {
     }
 
     public List<Product> readProducts() {
-        System.out.println("Odczytuję produkty z pliku");
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(PATH));
             List<Product> products1= (List<Product>) ois.readObject();
