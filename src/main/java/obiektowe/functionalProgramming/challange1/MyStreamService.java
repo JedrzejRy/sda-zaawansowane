@@ -74,7 +74,7 @@ public class MyStreamService implements StreamService {
         return people.stream()
                 .sorted((person, person2) -> (int) (person2.getCash() - person.getCash()))
                 .findFirst()
-                .get();
+                .orElse(null);
 
     }
 
@@ -83,6 +83,6 @@ public class MyStreamService implements StreamService {
         return people.stream()
                 .mapToDouble(person -> person.getCash())
                 .average()
-                .getAsDouble();
+                .orElse(-1);
     }
 }
