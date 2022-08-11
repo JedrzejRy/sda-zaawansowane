@@ -11,7 +11,7 @@ public class Main {
         // }
 
         ProductFileRepository productFileRepository = new ProductFileRepository();
-        //productFileRepository.ProductListWriter();
+        //productFileRepository.ProductListWriter(products);
 
         System.out.println(productFileRepository.readProducts());
 
