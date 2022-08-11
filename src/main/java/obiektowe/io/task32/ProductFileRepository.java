@@ -14,8 +14,6 @@ public class ProductFileRepository {
             oos.writeObject(products);
             oos.flush();
             oos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
