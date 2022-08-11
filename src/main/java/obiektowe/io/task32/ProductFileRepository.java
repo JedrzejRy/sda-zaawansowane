@@ -23,7 +23,7 @@ public class ProductFileRepository {
     }
 
     public List<Product> readProducts() {
-        System.out.println("Odczytuję grę z pliku");
+        System.out.println("Odczytuję produkty z pliku");
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(PATH));
             List<Product> products1= (List<Product>) ois.readObject();
